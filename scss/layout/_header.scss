@@ -1,0 +1,216 @@
+.site-nav{
+  z-index: 11;
+  position: fixed;
+  @include background-rgba(#3d253a, 0.0);
+  width: 100%;
+  // height: 40px;
+  .navbar-nav{
+    width: 100%;
+    line-height: 10px;
+    // height: 40px;
+    transition: all, 0.3s;
+    position: relative;
+    .navbar-phone{
+      display: inline-block;
+      line-height: 40px;
+
+
+      margin-left: 5%;
+      a{
+          color: #fff;
+          font-size: 18px;
+      }
+    }
+    .nav-trigger{
+      display: none;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      // position: absolute;
+      margin-right: 15px;
+      margin-top: 0px;
+      float: right;
+      padding: 15px 0;
+      // background-color: $dark;
+      transition: all 0.3s;
+      &:hover,
+      &:focus{
+        // @include background-rgba($dark, 0.8);
+        transition: all 0.3s;
+      }
+
+      &::after{
+        @include clear-both;
+      }
+      .icon-bar{
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        margin:6px auto;
+      }
+    }
+    .nav{
+      list-style-type: none;
+      float: right;
+      margin-right: 5%;
+      li{
+        float: left;
+        margin-left: 15px;
+        a{
+          color: #fff;
+          font-style: normal;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+}
+
+.navbar-scroll{
+  // height: 30px;
+  // line-height: 40px;
+  @include background-rgba(#3d253a, 1);
+  transition: all, 0.3s;
+}
+
+
+.hero{
+  background-color: #C5ECF0;
+  background: url('../img/hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  // padding: 40px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__welcome{
+    color: #000;
+    margin: 50px 0;
+  }
+  &__brand{
+    max-width: 450px;
+  }
+  &__btn{
+    background: $light;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1rem;
+    transition: all 0.4s;
+    width: 150px;
+    padding: 1em;
+    &:hover{
+      background: $dark;
+      color: #fff;
+      transition: all 0.4s;
+    }
+  }
+  .container{
+    text-align: center;
+
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1100px){
+  .hero{
+    background-attachment:local;
+  }
+}
+
+@media (max-width: 500px){
+  .hero{
+    // display: none;
+    background-attachment:local;
+    &__brand{
+      max-width: 300px;
+    }
+  }
+
+  .site-nav{
+    .navbar-nav{
+      // height: 60px;
+      .nav.open{
+        max-height: 400px;
+        // transition: max-height 0.3s;
+      }
+      .nav{
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        float: none;
+        margin:0;
+        transition: max-height, 0.4s;
+        background-color: rgba(0, 0, 0, 0.5);
+        max-height: 0;
+        li{
+          margin-left: 0;
+          background: $dark;
+          &:hover, &:focus{
+            background-color: $brown;
+          }
+          a{
+            display: block;
+            height: 100%;
+            margin: 10px 0;
+          }
+        }
+      }
+      .nav-trigger{
+        display: block;
+      }
+
+    }
+    padding: 0;
+
+  }
+
+  .navbar-brand{
+    // display: none;
+    margin: 0 0 0 30px;
+    // height: 60px;
+  }
+
+  .navbar-brand img{
+    margin: 15px 0;
+  }
+
+
+
+
+
+  .nav li{
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .nav li:hover,
+  .nav li:focus{
+    background-color: #28b8d8 ;
+  }
+
+  .nav li a{
+    display: block;
+    padding: 15px 0;
+    height: 100%;
+  }
+
+  .nav li a:hover,
+  .nav li a:focus{
+    color: #fff;
+  }
+}

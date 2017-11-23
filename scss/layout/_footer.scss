@@ -1,0 +1,30 @@
+.site-footer{
+  background-color: $dark;
+  .container{
+    .text-left, .text-right{
+      color: #fff;
+      font-style: normal;
+      margin: 15px 50px;
+      font-size: 0.9rem;
+    }
+    .text-left{float: left}
+    .text-right{float: right}
+    &::after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+}
+
+
+@media (max-width: 750px) {
+  .site-footer{
+    .container{
+      .text-left, .text-right{
+        margin: 15px 20px;
+        font-size: 1.1rem;
+      }
+}
+}
+}

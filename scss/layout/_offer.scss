@@ -1,0 +1,70 @@
+.offer{
+  padding: 30px 0;
+  background-color: #d6ccc1;
+  &__btn{
+    text-align: center;
+    margin: 30px 0;
+    .btn{
+      background: #FFF;
+      &:hover{
+        background-color: $brown;
+      }
+    }
+  }
+  &__title{
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      display: block;
+      float: left;
+      width: 20%;
+      margin: 0 2%;
+      text-align: center;
+      img{
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+  ul::after{
+    display: block;
+    content: '';
+    clear: both;
+  }
+
+}
+
+
+@media (min-width: 751px) and (max-width: 1100px) {
+  .offer{
+    ul{
+      padding: 0;
+      li{
+        width: 46%;
+        margin: 0 2%;
+        // border: 1px solid blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px){
+  .offer{
+    ul{
+      padding: 0;
+      li{
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 50px auto;
+        text-align: center;
+        img{
+          width:60%;
+        }
+      }
+    }
+  }
+}

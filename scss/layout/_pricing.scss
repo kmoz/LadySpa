@@ -1,0 +1,121 @@
+.pricing{
+  background-color: #fff;
+  padding: 30px;
+  &__btn{
+    text-align: center;
+    margin: 30px 0;
+  }
+  &__list{}
+  ul{
+    list-style-type: none;
+    li{
+      width: 46%;
+      margin: 5px 2%;
+      float: left;
+      span:first-child, span:last-child{
+        background-color: #fff;
+      }
+    }
+    &:after{
+      @include clear-both;
+    }
+  }
+
+}
+
+.dotted-list {
+  list-style-type: none;
+  .colspan{
+    text-align: center;
+    float: none;
+    span:first-child{
+      text-align: center;
+      float: none;
+    }
+    &:before{
+      content: "";
+    }
+  }
+
+  li {
+    overflow: hidden;
+    margin: 0px 0 10px 0;
+    position: relative;
+    width: 100% !important;
+
+    &:before {
+      content: ".......................................................................................................................................................................................................................................................................................................................................................";
+      white-space: nowrap;
+      position: absolute;
+    }
+    span:first-child {
+      float: left;
+      display: inline-block;
+      padding: 0 20px 0 0;
+      background-color: $light;
+      z-index: 10;
+      position: relative;
+    }
+    span + span {
+      float: right;
+      display: inline-block;
+      padding: 0 3px 0 20px;
+      background-color: $light;
+      z-index: 10;
+      position: relative;
+    }
+  }
+}
+
+.pricingFull{
+  ul{
+    list-style-type: none;
+    height: 300px;
+    // border: 1px solid red;
+    li{
+      // height: 500px;
+      width: 46%;
+      margin: 0 2%;
+      float: left;
+
+    }
+    &::after{
+      @include clear-both;
+    }
+  }
+  &__title{
+    text-align: center;
+  }
+  &__list{
+    ;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1100px) {
+
+}
+
+@media (max-width: 750px) {
+  .pricing{
+    ul{
+      li{
+        float: none;
+        width: 100%;
+        margin: 10px auto;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .pricingFull{
+    ul{
+      height: auto;
+      li{
+        float: none;
+        width: 80%;
+        margin: 15px auto;
+        
+      }
+    }
+  }
+}
